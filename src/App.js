@@ -5,12 +5,12 @@ const msg = ["Learn React", "Get Job", "Invest your income"];
 export default function App() {
   return (
     <div>
-      <Hello />
+      <Steps />
     </div>
   );
 }
 
-function Hello() {
+function Steps() {
   let [step, setStep] = useState(1);
   let [isOpen, setisOpen] = useState(true);
   function handleNext() {

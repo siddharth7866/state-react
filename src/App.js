@@ -12,6 +12,7 @@ export default function App() {
 
 function Hello() {
   let [step, setStep] = useState(1);
+  let [isOpen, setisOpen] = useState(true);
   function handleNext() {
     if (step < 3) {
       setStep(step + 1);

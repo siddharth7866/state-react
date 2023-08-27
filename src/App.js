@@ -11,7 +11,7 @@ export default function App() {
 }
 
 function Hello() {
-  const [step, setStep] = useState(1);
+  let [step, setStep] = useState(1);
   function handleNext() {
     if (step < 3) {
       setStep(step + 1);
@@ -22,6 +22,7 @@ function Hello() {
       setStep(step - 1);
     }
   }
+
   const sid = { backgroundColor: "purple", color: "white" };
   return (
     <div className="steps">

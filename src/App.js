@@ -26,24 +26,31 @@ function Hello() {
 
   const sid = { backgroundColor: "purple", color: "white" };
   return (
-    <div className="steps">
-      <div className="numbers">
-        <div className={step === 1 ? "active" : ""}>1</div>
-        <div className={step === 2 ? "active" : ""}>2</div>
-        <div className={step === 3 ? "active" : ""}>3</div>
-      </div>
+    <div>
+      <button className="close" onClick={() => setisOpen(!isOpen)}>
+        X
+      </button>
+      {isOpen && (
+        <div className="steps">
+          <div className="numbers">
+            <div className={step === 1 ? "active" : ""}>1</div>
+            <div className={step === 2 ? "active" : ""}>2</div>
+            <div className={step === 3 ? "active" : ""}>3</div>
+          </div>
 
-      <p className="message">
-        Step {step} :{msg[step - 1]}
-      </p>
-      <div className="buttons">
-        <button style={sid} onClick={handlePrevious}>
-          Previous
-        </button>
-        <button style={sid} onClick={handleNext}>
-          Next
-        </button>
-      </div>
+          <p className="message">
+            Step {step} :{msg[step - 1]}
+          </p>
+          <div className="buttons">
+            <button style={sid} onClick={handlePrevious}>
+              Previous
+            </button>
+            <button style={sid} onClick={handleNext}>
+              Next
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
